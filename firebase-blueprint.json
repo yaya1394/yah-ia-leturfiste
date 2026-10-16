@@ -1,0 +1,61 @@
+{
+  "entities": {
+    "Race": {
+      "title": "Race",
+      "description": "A horse race event.",
+      "type": "object",
+      "properties": {
+        "date": { "type": "string" },
+        "number": { "type": "integer" },
+        "name": { "type": "string" },
+        "distance": { "type": "integer" },
+        "allocations": { "type": "number" },
+        "track": { "type": "string" },
+        "corde": { "type": "string" },
+        "type_course": { "type": "string" }
+      },
+      "required": ["date", "number", "name"]
+    },
+    "Horse": {
+      "title": "Horse",
+      "description": "A participating horse profile with carrier data and past races.",
+      "type": "object",
+      "properties": {
+        "nom": { "type": "string" },
+        "age": { "type": "integer" },
+        "sexe": { "type": "string" },
+        "entraineur": { "type": "string" },
+        "driver": { "type": "string" },
+        "musique": { "type": "string" },
+        "recordAbsolu": { "type": "string" },
+        "nbCoursesCarriere": { "type": "integer" },
+        "nbVictoires": { "type": "integer" },
+        "nbPlaces": { "type": "integer" },
+        "pere": { "type": "string" },
+        "mere": { "type": "string" },
+        "pereDeMere": { "type": "string" },
+        "proprietaire": { "type": "string" },
+        "eleveur": { "type": "string" },
+        "race": { "type": "string" },
+        "robe": { "type": "string" },
+        "deferre": { "type": "string" },
+        "coursesPassees": { "type": "string" }
+      },
+      "required": ["nom"]
+    }
+  },
+  "firestore": {
+    "/races/{raceId}": {
+      "schema": "Race",
+      "description": "Collection of horse races."
+    },
+    "/races/{raceId}/participants/{participantId}": {
+      "schema": "Horse",
+      "description": "Participants in a specific race."
+    },
+    "/horses/{horseId}": {
+      "schema": "Horse",
+      "description": "Official persistent archive of horses with their past races history in chronological order."
+    }
+  }
+}

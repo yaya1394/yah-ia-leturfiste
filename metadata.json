@@ -1,0 +1,8 @@
+{
+  "name": "Yah.IA.LeTurfiste",
+  "description": "API & Plateforme d'Intelligence Artificielle pour les courses hippiques, Quinté+ et pronostics PMU en temps réel.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

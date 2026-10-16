@@ -1,0 +1,55 @@
+{
+  "name": "yah-ia-leturfiste",
+  "private": false,
+  "version": "0.0.0",
+  "description": "Application open source d'analyse des courses hippiques françaises et d'archives PMU",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port=3000 --host=0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "tsx server.ts",
+    "clean": "node scripts/clean.mjs",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@google/genai": "^2.4.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "@vitejs/plugin-react": "^6.1.1",
+    "axios": "^1.20.0",
+    "better-sqlite3": "^13.0.3",
+    "dotenv": "^17.2.3",
+    "express": "^4.21.2",
+    "firebase": "12.17.0",
+    "firebase-admin": "^14.5.0",
+    "lucide-react": "^0.546.0",
+    "motion": "^12.23.24",
+    "node-cron": "^4.6.0",
+    "react": "^19.0.1",
+    "react-dom": "^19.0.1",
+    "vite": "^8.3.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@firebase/eslint-plugin-security-rules": "^0.0.2",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "autoprefixer": "^10.4.21",
+    "esbuild": "^0.28.2",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3",
+    "vite-plugin-pwa": "^2.0.0"
+  },
+  "overrides": {
+    "@firebase/app": "0.16.0",
+    "@firebase/app-compat": "0.5.16",
+    "@grpc/grpc-js": "^1.14.6"
+  }
+}
